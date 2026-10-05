@@ -1,0 +1,6 @@
+ollama
+numpy
+pypdf
+pybind11
+setuptools
+streamlit
