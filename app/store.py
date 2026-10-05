@@ -14,3 +14,9 @@ def save_index(vectors, chunks):
 
 def load_index():
     vectors = np.load(INDEX_DIR / "vectors.npy")
+    chunks = json.loads((INDEX_DIR / "chunks.json").read_text(encoding="utf-8"))
+    return vectors, chunks
+
+
+def index_exists():
+    return (INDEX_DIR / "vectors.npy").exists()
